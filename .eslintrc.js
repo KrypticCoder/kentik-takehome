@@ -17,6 +17,11 @@ module.exports = {
     react: {
       version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
     },
+    'import/resolver': {
+      webpack: {
+        config: 'webpack.config.js',
+      },
+    },
   },
   // Fine tune rules
   rules: {

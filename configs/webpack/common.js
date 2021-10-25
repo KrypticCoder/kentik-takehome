@@ -5,13 +5,23 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    alias: {
+      components: resolve(__dirname, '../../src/components'),
+      redux: resolve(__dirname, '../../src/redux'),
+      assets: resolve(__dirname, '../../src/assets'),
+    },
   },
   context: resolve(__dirname, '../../src'),
   module: {
     rules: [
       {
-        test: [/\.jsx?$/, /\.tsx?$/],
+        test: [/\.jsx?$/],
         use: ['babel-loader'],
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.ts(x)?$/,
+        loader: 'ts-loader',
         exclude: /node_modules/,
       },
       {
@@ -31,7 +41,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({template: 'index.html'})],
+  plugins: [new HtmlWebpackPlugin({template: 'index.html.ejs'})],
   externals: {
     react: 'React',
     'react-dom': 'ReactDOM',

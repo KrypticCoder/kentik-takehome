@@ -1,9 +1,8 @@
 {
   "name": "kentik-takehome",
   "version": "0.1.0",
-
   "author": "Dimitri Vasilev",
-   "scripts": {
+  "scripts": {
     "build": "yarn run clean-dist && webpack --config=configs/webpack/prod.js",
     "clean-dist": "rimraf dist/*",
     "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
@@ -42,11 +41,15 @@
     "rimraf": "^3.0.2",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.3.0",
+    "ts-loader": "^9.2.6",
     "typescript": "^4.4.3",
     "webpack": "^5.58.0",
     "webpack-cli": "^4.9.0",
     "webpack-dev-server": "^4.3.1",
     "webpack-merge": "^5.8.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react-redux": "^7.2.5",
+    "redux": "^4.1.1"
+  }
 }
