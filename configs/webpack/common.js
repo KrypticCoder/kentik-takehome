@@ -7,7 +7,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
       components: resolve(__dirname, '../../src/components'),
-      redux: resolve(__dirname, '../../src/redux'),
+      store: resolve(__dirname, '../../src/store'),
       assets: resolve(__dirname, '../../src/assets'),
     },
   },

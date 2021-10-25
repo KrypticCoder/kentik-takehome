@@ -1,10 +1,13 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
     "jsx": "react",
     "module": "commonjs",
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "pretty": true,
     "sourceMap": true,
+    "resolveJsonModule": true,
     "target": "es6",
     "outDir": "./dist",
     "baseUrl": "./src",

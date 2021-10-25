@@ -26,5 +26,7 @@ module.exports = {
   // Fine tune rules
   rules: {
     '@typescript-eslint/no-var-requires': 0,
+    'object-curly-spacing': 'always',
+    'space-in-brackets': 'always',
   },
 };

@@ -1,21 +1,18 @@
 import * as React from 'react';
-import {hot} from 'react-hot-loader';
+import { hot } from 'react-hot-loader';
 
-const reactLogo = require('assets/img/react_logo.svg');
-import './App.scss';
+import { store } from 'store';
+import { Provider } from 'react-redux';
 
-class App extends React.Component<Record<string, unknown>, undefined> {
-  public render() {
-    return (
-      <div className="app">
-        <h1>Hello there!</h1>
-        <p>Foo to the barz. ok then</p>
-        <img src={reactLogo.default} height="480" />
-      </div>
-    );
-  }
-}
+import { Main } from 'components/Main';
 
-declare let module: Record<string, unknown>;
+const App = () => {
+  console.log('store', store);
+  return (
+    <Provider store={store}>
+      <Main />
+    </Provider>
+  );
+};
 
 export default hot(module)(App);
