@@ -1,15 +1,14 @@
 // shared config (dev and prod)
-const {resolve} = require('path');
+const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    alias: {
-      components: resolve(__dirname, '../../src/components'),
-      store: resolve(__dirname, '../../src/store'),
-      assets: resolve(__dirname, '../../src/assets'),
-    },
+    extensions: ['', '.js', '.jsx', '.ts', '.tsx'],
+    modules: [
+      resolve(__dirname, '../../src'),
+      resolve(__dirname, '../../node_modules'),
+    ],
   },
   context: resolve(__dirname, '../../src'),
   module: {
@@ -41,7 +40,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({template: 'index.html.ejs'})],
+  plugins: [new HtmlWebpackPlugin({ template: 'index.html.ejs' })],
   externals: {
     react: 'React',
     'react-dom': 'ReactDOM',

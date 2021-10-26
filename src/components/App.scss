@@ -1,12 +1,20 @@
 $bg-color: yellow;
 $border-color: red;
+$dark-blue: #005D6E;
+$light-blue: #42A5B3;
 
-.app {
-  font-family: helvetica, arial, sans-serif;
-  padding: 2em;
-  border: 5px solid green;
 
-  p {
-    background-color: $bg-color;
+.map {
+  stroke: black;
+
+  .city {
+    fill: $dark-blue;
+    stroke: #999999;
+    stroke-width: 2;
+
+    &:hover {
+      opacity: .25;
+      cursor: pointer;
+    }
   }
 }

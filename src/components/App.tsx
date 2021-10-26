@@ -6,8 +6,9 @@ import { Provider } from 'react-redux';
 
 import { Main } from 'components/Main';
 
+import 'components/App.scss';
+
 const App = () => {
-  console.log('store', store);
   return (
     <Provider store={store}>
       <Main />

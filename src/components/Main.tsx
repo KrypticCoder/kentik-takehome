@@ -1,20 +1,19 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from 'store';
+import React from 'react';
 
-import { mainAction } from 'store/actions/main';
-import { mainSelector } from 'store/selectors/main';
+import { useData } from 'hooks/useData';
+import { width, height } from 'utils/constants';
+import { Map } from 'components/Map';
 
 export const Main = () => {
-  const dispatch = useDispatch();
+  const data = useData();
 
-  const attribute = useSelector<RootState, boolean>(mainSelector);
+  if (!data) {
+    return <div>Loading...</div>;
+  }
 
-  useEffect(() => {
-    dispatch(mainAction(true));
-  }, []);
-
-  console.log(attribute);
-
-  return <div className="app">{`Attribute: ${attribute}`}</div>;
+  return (
+    <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
+      <Map data={data} />
+    </svg>
+  );
 };
