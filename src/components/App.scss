@@ -3,8 +3,31 @@ $border-color: red;
 $dark-blue: #005D6E;
 $light-blue: #42A5B3;
 
+.title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.filter-year {
+  display: flex;
+  align-items: center;
+
+  .label {
+    margin-right: 20px;
+    font-weight: bold;
+  }
+}
+
+.Dropdown-root {
+  max-width: 100px;
+  
+  .Dropdown-control {
+    cursor: pointer;
+  }
+}
 
 .map {
+  margin-top: 50px;
   stroke: black;
 
   .city {
@@ -18,3 +41,4 @@ $light-blue: #42A5B3;
     }
   }
 }
+
