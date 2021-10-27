@@ -1,7 +1,14 @@
-$bg-color: yellow;
-$border-color: red;
+@import "react-dropdown/style";
+@import "react-tabs/style/react-tabs.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 $dark-blue: #005D6E;
-$light-blue: #42A5B3;
+$green-color: #5C8100;
+$brown-color: #7C715E;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
 .title {
   font-size: 2rem;
@@ -20,6 +27,7 @@ $light-blue: #42A5B3;
 
 .Dropdown-root {
   max-width: 100px;
+  font-family: initial;
   
   .Dropdown-control {
     cursor: pointer;
@@ -27,17 +35,53 @@ $light-blue: #42A5B3;
 }
 
 .map {
-  margin-top: 50px;
-  stroke: black;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  .city {
-    fill: $dark-blue;
-    stroke: #999999;
-    stroke-width: 2;
+  svg {
+    stroke: black;
 
-    &:hover {
-      opacity: .25;
-      cursor: pointer;
+    .city {
+      fill: $dark-blue;
+      stroke: #999999;
+      stroke-width: 2;
+
+      &:hover {
+        opacity: .25;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .mark {
+    fill: $green-color;
+  }
+
+  line {
+    stroke: $brown-color;
+  }
+
+  text {
+    fill: $brown-color;
+
+    &.middle {
+      text-anchor: middle;
+    }
+
+    &.axis-label {
+      font-size: 1.5em;
+
+      &.vertical {
+        text-orientation: mixed;
+      }
     }
   }
 }

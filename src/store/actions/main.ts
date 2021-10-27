@@ -1,3 +1,3 @@
-import { createAction } from '@reduxjs/toolkit';
+import { createAction } from "@reduxjs/toolkit";
 
-export const mainAction = createAction<boolean>('MAIN_ACTION');
+export const setYear = createAction<number>("SET_YEAR");

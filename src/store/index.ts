@@ -1,13 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit';
-import reduceReducers from 'reduce-reducers';
-import { mainReducer } from 'store/reducers/main';
+import { configureStore } from "@reduxjs/toolkit";
+import reduceReducers from "reduce-reducers";
+import { mainReducer } from "store/reducers/main";
+import { initialYear } from "utils/constants";
 
 export interface RootState {
-  attribute: boolean;
+  year: number;
 }
 
 export const initialRootState: RootState = {
-  attribute: false,
+  year: initialYear,
 };
 
 const rootReducer = reduceReducers(initialRootState, mainReducer);

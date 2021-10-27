@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\dvasi\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @types/react-dropdown
+  C:\Program Files\nodejs\node.exe C:\Users\dvasi\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add reac-tabs
 
 PATH: 
   C:\Python39\Scripts\;C:\Python39\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\dvasi\AppData\Local\Microsoft\WindowsApps;C:\Users\dvasi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\dvasi\AppData\Roaming\npm;C:\Users\dvasi\AppData\Local\GitHubDesktop\bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2freact-dropdown: Not found
+  Error: https://registry.yarnpkg.com/reac-tabs: Not found
       at Request.params.callback [as _callback] (C:\Users\dvasi\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67029:18)
       at Request.self.callback (C:\Users\dvasi\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
       at Request.emit (node:events:394:28)
@@ -85,6 +85,7 @@ npm manifest:
       "d3-geo": "^3.0.1",
       "react-dropdown": "^1.9.2",
       "react-redux": "^7.2.5",
+      "react-tooltip": "^4.2.21",
       "reduce-reducers": "^1.0.4",
       "redux": "^4.1.1"
     }
@@ -7538,6 +7539,14 @@ Lockfile:
       prop-types "^15.7.2"
       react-is "^16.13.1"
   
+  react-tooltip@^4.2.21:
+    version "4.2.21"
+    resolved "https://registry.yarnpkg.com/react-tooltip/-/react-tooltip-4.2.21.tgz#840123ed86cf33d50ddde8ec8813b2960bfded7f"
+    integrity sha512-zSLprMymBDowknr0KVDiJ05IjZn9mQhhg4PRsqln0OZtURAJ1snt1xi5daZfagsh6vfsziZrc9pErPTDY1ACig==
+    dependencies:
+      prop-types "^15.7.2"
+      uuid "^7.0.3"
+  
   react@^17.0.2:
     version "17.0.2"
     resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
@@ -8943,6 +8952,11 @@ Lockfile:
     version "3.4.0"
     resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
     integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+  
+  uuid@^7.0.3:
+    version "7.0.3"
+    resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
+    integrity sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
   
   v8-compile-cache@^2.0.3:
     version "2.3.0"

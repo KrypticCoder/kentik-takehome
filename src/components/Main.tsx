@@ -1,47 +1,36 @@
-import React, { useMemo, useState } from "react";
-import Dropdown, { Option } from "react-dropdown";
-import "react-dropdown/style.css";
-import ReactTooltip from "react-tooltip";
+import React, { useState } from "react";
+import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 
-import { ToolTipContent } from "components/TooltipContent";
 import { useData } from "hooks/useData";
-import { width, height, initialYear, years } from "utils/constants";
 import { Map } from "components/Map";
+import { Graph } from "components/graph/Graph";
 
 export const Main = () => {
   const data = useData();
 
-  const [year, setYear] = useState<number>(initialYear);
-
-  const options: Option[] = useMemo(
-    () =>
-      years.map((year) => ({ label: year.toString(), value: year.toString() })),
-    [years],
-  );
-
-  const onChange = ({ value }: Option) => {
-    setYear(+value);
-  };
+  const [tabIndex, setTabIndex] = useState<number>(0);
 
   if (!data) {
     return <div>Loading...</div>;
   }
 
+  console.log("data", data);
+
   return (
     <div className="main">
       <h1 className="title">Car Crashes in Washington DC Districts</h1>
-      <ReactTooltip id="properties" getContent={ToolTipContent} />
-      <div className="filter-year">
-        <div className="label">Filter By Year:</div>
-        <Dropdown options={options} onChange={onChange} value={options[0]} />
-      </div>
-      <svg
-        className="map"
-        width={width}
-        height={height}
-        viewBox={`0 0 ${width} ${height}`}>
-        <Map data={data} year={year} />
-      </svg>
+      <Tabs selectedIndex={tabIndex} onSelect={setTabIndex}>
+        <TabList>
+          <Tab>Map</Tab>
+          <Tab>Graph</Tab>
+        </TabList>
+        <TabPanel>
+          <Map data={data} />
+        </TabPanel>
+        <TabPanel>
+          <Graph data={data} />
+        </TabPanel>
+      </Tabs>
     </div>
   );
 };

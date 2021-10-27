@@ -1,3 +1,3 @@
-import { RootState } from 'store';
+import { RootState } from "store";
 
-export const mainSelector = (state: RootState) => state.attribute;
+export const yearSelector = (state: RootState) => state.year;
